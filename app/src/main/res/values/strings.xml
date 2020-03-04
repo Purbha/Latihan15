@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Latihan15</string>
+    <string name="imageView_Main_Banner">Main Banner</string>
+    <string name="imageView_Template_Icon">Template Icon</string>
+    <string name="textView_Template_Huruf">A</string>
+    <string name="imageView_Detail_Icon">Detail Icon</string>
+    <string name="imageView_Detail_Banner">Detail Banner</string>
+    <string name="textView_Detail_Teks">Anda memilih huruf: A</string>
+</resources>
