@@ -26,8 +26,8 @@ public class DetailActivity extends AppCompatActivity {
 
     private void Set_Object() {
         Intent intent = getIntent();
-        String Huruf = intent.getStringExtra("huruf");
-        int Gambar = intent.getIntExtra("gambar",0);
+        String Huruf = intent.getStringExtra(GlobalVar.EXTRA_HURUF);
+        int Gambar = intent.getIntExtra(GlobalVar.EXTRA_GAMBAR,0);
         TV_Teks.setText("Anda memilih huruf: " + Huruf);
         IV_Icon.setImageResource(Gambar);
     }

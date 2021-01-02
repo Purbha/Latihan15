@@ -18,10 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:fontFamily="sans-serif-condensed"
         android:text="@string/textView_Template_Huruf"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        style="@style/textView_Style1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_Template_Icon" />
 

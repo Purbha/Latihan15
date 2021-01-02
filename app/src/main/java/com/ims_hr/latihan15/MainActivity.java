@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                intent.putExtra("huruf",List_Huruf[position]);
-                intent.putExtra("gambar",List_Icon[position]);
+                intent.putExtra(GlobalVar.EXTRA_HURUF,List_Huruf[position]);
+                intent.putExtra(GlobalVar.EXTRA_GAMBAR,List_Icon[position]);
                 startActivity(intent);
             }
         });
