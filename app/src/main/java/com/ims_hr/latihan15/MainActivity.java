@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void Inisial() {
         GV_Data = findViewById(R.id.GridView_Main_Data);
+        //Log.d("CEK",String.valueOf(R.drawable.b));
+        //2131099649 (a)
+        //2131099734 (b)
     }
 
     private void Set_Grid() {
