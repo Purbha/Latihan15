@@ -2,10 +2,9 @@ package com.ims_hr.latihan15;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.GridView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,14 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Listen_GV_Data() {
-        GV_Data.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                intent.putExtra(GlobalVar.EXTRA_HURUF,List_Huruf[position]);
-                intent.putExtra(GlobalVar.EXTRA_GAMBAR,List_Icon[position]);
-                startActivity(intent);
-            }
+        GV_Data.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+            intent.putExtra(GlobalVar.EXTRA_HURUF,List_Huruf[position]);
+            intent.putExtra(GlobalVar.EXTRA_GAMBAR,List_Icon[position]);
+            startActivity(intent);
         });
     }
 
