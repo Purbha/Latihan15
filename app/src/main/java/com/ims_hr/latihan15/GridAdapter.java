@@ -13,7 +13,6 @@ public class GridAdapter extends BaseAdapter {
     private int Icon[];
     private String Huruf[];
     private Context Ctx;
-    private LayoutInflater inflater;
 
     public GridAdapter(int[] icon, String[] huruf, Context ctx) {
         Icon = icon;
@@ -23,7 +22,7 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return Huruf.length;
+        return Icon.length;
     }
 
     @Override
@@ -38,9 +37,10 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        /*
         View GridView = convertView;
         if(convertView == null){
-            inflater = (LayoutInflater) Ctx.getSystemService(Ctx.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) Ctx.getSystemService(Ctx.LAYOUT_INFLATER_SERVICE);
             GridView = inflater.inflate(R.layout.template_grid,null);
         }
         ImageView icon = GridView.findViewById(R.id.imageView_Template_Icon);
@@ -48,6 +48,16 @@ public class GridAdapter extends BaseAdapter {
         icon.setImageResource(Icon[position]);
         huruf.setText(Huruf[position]);
         return GridView;
+        */
+        if(convertView == null){
+            LayoutInflater inflater = (LayoutInflater) Ctx.getSystemService(Ctx.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.template_grid,null);
+        }
+        ImageView icon = convertView.findViewById(R.id.imageView_Template_Icon);
+        TextView huruf = convertView.findViewById(R.id.textView_Template_Huruf);
+        icon.setImageResource(Icon[position]);
+        huruf.setText(Huruf[position]);
+        return convertView;
     }
 
 }
