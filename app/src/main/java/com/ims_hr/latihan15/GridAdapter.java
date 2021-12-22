@@ -37,7 +37,7 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        /*
+        
         View GridView = convertView;
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) Ctx.getSystemService(Ctx.LAYOUT_INFLATER_SERVICE);
@@ -48,7 +48,8 @@ public class GridAdapter extends BaseAdapter {
         icon.setImageResource(Icon[position]);
         huruf.setText(Huruf[position]);
         return GridView;
-        */
+
+        /*
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) Ctx.getSystemService(Ctx.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.template_grid,null);
@@ -58,6 +59,7 @@ public class GridAdapter extends BaseAdapter {
         icon.setImageResource(Icon[position]);
         huruf.setText(Huruf[position]);
         return convertView;
+        */
     }
 
 }

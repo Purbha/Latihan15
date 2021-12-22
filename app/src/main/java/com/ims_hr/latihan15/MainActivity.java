@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
             ,R.drawable.r,R.drawable.s,R.drawable.t,R.drawable.u,R.drawable.v,R.drawable.w
             ,R.drawable.x,R.drawable.y,R.drawable.z};
     GridAdapter gridAdapter;
+    Grid_Adapter grid_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void Inisial() {
         GV_Data = findViewById(R.id.GridView_Main_Data);
-        //Log.d("CEK",String.valueOf(R.drawable.b));
-        //2131099649 (a)
-        //2131099734 (b)
     }
 
     private void Set_Grid() {
-        gridAdapter = new GridAdapter(List_Icon,List_Huruf, MainActivity.this);
-        GV_Data.setAdapter(gridAdapter);
+        //gridAdapter = new GridAdapter(List_Icon,List_Huruf, MainActivity.this);
+        //GV_Data.setAdapter(gridAdapter);
+        grid_adapter = new Grid_Adapter(List_Icon,List_Huruf,MainActivity.this,R.layout.template_grid);
+        GV_Data.setAdapter(grid_adapter);
     }
 
     private void Listen_GV_Data() {
